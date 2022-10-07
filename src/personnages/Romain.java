@@ -1,34 +1,42 @@
+package personnages;
+
 public class Romain {
-<<<<<<< HEAD
-
-	public String getNom() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-}
-=======
 	private String nom;
 	private int force;
+	private int effetPotion = 1;
+
 	public Romain(String nom, int force) {
+		super();
 		this.nom = nom;
 		this.force = force;
 	}
+
 	public String getNom() {
 		return nom;
 	}
+
+	@Override
+	public String toString() {
+		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
+	}
+
 	public void parler(String texte) {
-		System.out.println(prendreParole() + "« " + texte + "»");
+		System.out.println(prendreParole() + "<<" + texte + ">>");
+
 	}
+
 	private String prendreParole() {
-		return "Le romain " + nom + " : ";
+		return "Le gaulois" + nom + ":";
 	}
-	public void recevoirCoup(int forceCoup) {
-		force -= forceCoup;
-	if (force > 0) {
-		parler("Aïe");
-	} else {
-		parler("J'abandonne...");
+
+
+
+	public static void main(String[] args) {
+
 	}
+
+	public void recevoirCoup(int i) {
+		// TODO Auto-generated method stub
+		
 	}
->>>>>>> 22c2d202e7ee39337197402f0ba2087bc7183e73
+}
